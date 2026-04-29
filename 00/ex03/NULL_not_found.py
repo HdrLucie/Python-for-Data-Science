@@ -7,6 +7,9 @@ Empty = ""
 Fake = False
 
 def NULL_not_found(object: any) -> int:
+    """
+        Nan is never equal to itself, we need to check the type of object and if it's NaN
+    """
     if isinstance(object, float) and math.isnan(object):
         print("Cheese: nan", type(object))
         return 0
