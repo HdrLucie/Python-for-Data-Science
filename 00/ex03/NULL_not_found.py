@@ -1,5 +1,3 @@
-import math
-
 Nothing = None
 Garlic = float("NaN")
 Zero = 0
@@ -7,10 +5,7 @@ Empty = ""
 Fake = False
 
 def NULL_not_found(object: any) -> int:
-    """
-        Nan is never equal to itself, we need to check the type of object and if it's NaN
-    """
-    if isinstance(object, float) and math.isnan(object):
+    if type(object) is float:
         print("Cheese: nan", type(object))
         return 0
     elif object is Nothing:
@@ -26,5 +21,5 @@ def NULL_not_found(object: any) -> int:
         print("Fake: False ", type(object))
         return 0
     else:
-        print("Type not found")
+        print("Type not Found")
         return 1
